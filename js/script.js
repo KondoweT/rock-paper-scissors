@@ -14,12 +14,8 @@ function computerPlay(){
     return computerChoice;
 }
 
-function gamerPlay(){
-    let playerChoice = prompt('Let\'s play a game of Rock Paper Scissors\n \
-    Please type your choice', 'Rock');
-    if(playerChoice === null || playerChoice === ''){
-        return 'ERROR';
-    }else{
+function gamerPlay(id){
+    let playerChoice = id;
         let lCase = playerChoice.toLowerCase();
         let fLetterTUpperCase =lCase[0].toUpperCase();
         let finalChoice = fLetterTUpperCase + lCase.slice(1);
@@ -29,7 +25,7 @@ function gamerPlay(){
         }else{
             return 'ERROR';
         }
-    }
+    
     
 }
 
@@ -51,35 +47,46 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function getWinner(playerScore, computerScore){
-    if(playerScore > computerScore){
-        return `You Won the Game! ${playerScore} to ${computerScore}`;
-    }else if(computerScore > playerScore){
-        return `You Lost the Game! ${computerScore} to ${playerScore}`;
-    }else{
-        return `You Drew the Game! ${computerScore} to ${playerScore}`;
-    }
-}
+// function getWinner(playerScore, computerScore){
+//     if(playerScore > computerScore){
+//         return `You Won the Game! ${playerScore} to ${computerScore}`;
+//     }else if(computerScore > playerScore){
+//         return `You Lost the Game! ${computerScore} to ${playerScore}`;
+//     }else{
+//         return `You Drew the Game! ${computerScore} to ${playerScore}`;
+//     }
+// }
 
-function game(){
-    let playerScore = 0, computerScore = 0;
-    for(let i = 0; i < 5; i++){
-        const playerSelection = gamerPlay();
+// function game(){
+//     let playerScore = 0, computerScore = 0;
+//     for(let i = 0; i < 5; i++){
+//         const playerSelection = gamerPlay();
+//         const computerSelection = computerPlay();
+//         const round = playRound(playerSelection, computerSelection);
+//         if (round.indexOf('Win') > 0) {
+//             playerScore += 1;
+//             alert(`${round}\n playerScore: ${playerScore} computerScore: ${computerScore}`);
+//         } else if(round.indexOf('Lose') > 0){
+//             computerScore += 1;
+//             alert(`${round}\n playerScore: ${playerScore} computerScore: ${computerScore}`);
+//         }else{
+//             alert(`${round}\n playerScore: ${playerScore} computerScore: ${computerScore}`);
+//         }
+//     }
+//     const gameResult = getWinner(playerScore,computerScore);
+//     return gameResult;
+// }
+
+// let gamePlay = game();
+// alert(gamePlay);
+
+const btnOptions = document.querySelectorAll('.btnOption');
+btnOptions.forEach((btnOption)=>{
+    btnOption.addEventListener('click',()=>{
+        const id = btnOption.id;
+        const playerSelection = gamerPlay(id);
         const computerSelection = computerPlay();
-        const round = playRound(playerSelection, computerSelection);
-        if (round.indexOf('Win') > 0) {
-            playerScore += 1;
-            alert(`${round}\n playerScore: ${playerScore} computerScore: ${computerScore}`);
-        } else if(round.indexOf('Lose') > 0){
-            computerScore += 1;
-            alert(`${round}\n playerScore: ${playerScore} computerScore: ${computerScore}`);
-        }else{
-            alert(`${round}\n playerScore: ${playerScore} computerScore: ${computerScore}`);
-        }
-    }
-    const gameResult = getWinner(playerScore,computerScore);
-    return gameResult;
-}
-
-let gamePlay = game();
-alert(gamePlay);
+        const roundWinner = playRound(playerSelection, computerSelection);
+        alert(roundWinner);
+    });
+});
