@@ -7,15 +7,42 @@
     <title>Rock Paper Scissors Console project</title>
 </head>
 <body>
-    <h1 style="text-align: center;
-    margin-top: 5vh; margin-bottom: 5vh;">Console based Rock Paper Scissors Game</h1>
-
     <!-- rps-ui development starts here -->
-    <div id="btnContainer">
-        <button id="rock" class="btnOption">Rock</button>
-        <button id="paper" class="btnOption">Paper</button>
-        <button id="scissors" class="btnOption">Scissors</button>
-    </div>
+    <header>
+        <h1>ROCK PAPER SCISSORS</h1>
+    </header>
+    <main>
+        <div id="btnContainer" class="input">
+            <h2>Choose Your Weapon</h2>
+            <p>First player to 5 points Wins</p>
+            <button id="rock" class="btnOption">Rock</button>
+            <button id="paper" class="btnOption">Paper</button>
+            <button id="scissors" class="btnOption">Scissors</button>
+        </div>
+        <div class="output">
+            <div class="update">
+                <div>
+                    <p>PlayerScore</p>
+                    <div class="score">
+                        <p id="playerScore">0</p>
+                    </div>
+                </div>
+                <div>
+                    <p>ComputerScore</p>
+                    <div class="score">
+                        <p id="computerScore">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <p id="message">Scoreline Story</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2>&COPY;Mukuka Kondowe</h2>
+    </footer>
+    
     <script src="js//script.js"></script>
 </body>
 </html>
