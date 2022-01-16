@@ -15,9 +15,9 @@
         <div id="btnContainer" class="input">
             <h2>Choose Your Weapon</h2>
             <p>First player to 5 points Wins</p>
-            <button id="rock" class="btnOption">Rock</button>
-            <button id="paper" class="btnOption">Paper</button>
-            <button id="scissors" class="btnOption">Scissors</button>
+            <button id="Rock" data-selection="rock" class="btnOption">Rock</button>
+            <button id="Paper" data-selection="paper" class="btnOption">Paper</button>
+            <button id="Scissors" data-selection="scissors" class="btnOption">Scissors</button>
         </div>
         <div class="output">
             <div class="update">
@@ -25,17 +25,20 @@
                     <p>PlayerScore</p>
                     <div class="score">
                         <p id="playerScore">0</p>
+                        <p id="playerSelection"></p>
                     </div>
                 </div>
                 <div>
                     <p>ComputerScore</p>
                     <div class="score">
                         <p id="computerScore">0</p>
+                        <p id="computerSelection"></p>
                     </div>
                 </div>
             </div>
             <div class="message">
-                <p id="message">Scoreline Story</p>
+                <p id="message">Winner of round gets shown here</p>
+                <button id="restart">Restart</button>
             </div>
         </div>
     </main>
