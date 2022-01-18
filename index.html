@@ -4,46 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors Console project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
     <!-- rps-ui development starts here -->
     <header>
-        <h1>ROCK PAPER SCISSORS</h1>
+        <div class="center">
+            <h1>ROCK PAPER SCISSORS</h1>
+        </div>
     </header>
     <main>
-        <div id="btnContainer" class="input">
-            <h2>Choose Your Weapon</h2>
-            <p>First player to 5 points Wins</p>
-            <button id="Rock" data-selection="rock" class="btnOption">Rock</button>
-            <button id="Paper" data-selection="paper" class="btnOption">Paper</button>
-            <button id="Scissors" data-selection="scissors" class="btnOption">Scissors</button>
+        <div id="btnContainer" class="input sizing">
+            <div>
+                <br /><h2>Choose Your Weapon</h2><br/>
+                <p>First player to 5 points Wins</p>
+            </div>
+            <div class="options centerbtn">
+                <button id="Rock" data-selection="rock" class="btnOption">Rock</button>
+                <button id="Paper" data-selection="paper" class="btnOption">Paper</button>
+                <button id="Scissors" data-selection="scissors" class="btnOption">Scissors</button>
+            </div>
         </div>
-        <div class="output">
+        <div class="output sizing">
             <div class="update">
-                <div>
-                    <p>PlayerScore</p>
-                    <div class="score">
-                        <p id="playerScore">0</p>
-                        <p id="playerSelection"></p>
-                    </div>
-                </div>
-                <div>
-                    <p>ComputerScore</p>
-                    <div class="score">
-                        <p id="computerScore">0</p>
-                        <p id="computerSelection"></p>
-                    </div>
+                <div class="spacing">
+                    <h3>PlayerScore</h3>
+                    <div class="score"><p id="playerScore">0</p></div>
+                    <div class="selection"><p id="playerSelection">❔</p></div>
+                </div>              
+                <div class="spacing">
+                    <h3>ComputerScore</h3>
+                    <div class="score"><p id="computerScore">0</p></div>
+                    <div class="selection"><p id="computerSelection">❔</p></div>
                 </div>
             </div>
             <div class="message">
-                <p id="message">Winner of round gets shown here</p>
+                <div class="score message"><p id="message">Winner of round gets shown here</p></div>
                 <button id="restart">Restart</button>
             </div>
         </div>
     </main>
     <footer>
-        <h2>&COPY;Mukuka Kondowe</h2>
+        <div class="center">
+            <h2>
+                ©<script>
+                  document.write(new Date().getFullYear())
+                </script>
+                KondoweT
+            </h2>
+        </div>
     </footer>
     
     <script src="js//script.js"></script>

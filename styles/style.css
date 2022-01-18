@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+header{
+    background-color: #386E7D;
+    text-align: center;
+    height: 10vh;
+    font-family: 'Press Start 2P', cursive;
+    /* background-color: #C0C06E; */
+}
+
+main{
+    display: flex;
+    gap: 5px;
+    height: 80vh;
+    background-color: #5BB1C9;
+}
+
+footer{
+    height: 10vh;
+    text-align: center;
+    background-color: #386E7D;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    justify-content:flex-start;
+    gap: 10vh;
+    text-align: center;
+    background-color: #55A6BD;
+}
+
+.output{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}
+.update{
+    /* border: 3px black dashed; */
+    display: flex;
+    justify-content: space-around;
+    height: 45%;
+}
+
+button{
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    width: 15vw;
+    height: 5rem;
+    border-radius: 5px;
+    background-color: #386E7D;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0px 15px 30px rgb(0 0 0 / 15%);
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.center{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fac650;
+}
+
+.score{
+    background-color: blanchedalmond;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score.message{
+    width: 500px;
+    height: 5rem;
+    margin-bottom: 1em;
+    color: #141311;
+    font-family: 'Press Start 2P', cursive;
+    background-color: blanchedalmond;
+}
+
+.spacing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+h2{
+    font-size: 32px;
+}
+h3{
+    font-size: 32px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.selection{
+    font-weight: 900;
+    font-size: 2rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+button:hover{
+    cursor: pointer;
+    color: #fac650;
+}
