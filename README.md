@@ -1,17 +1,16 @@
 # ROCK PAPER SCISSORS CONSOLE GAME
 ## Synopsis
-    This is a console base rock, paper or scissors game. The visitor
-    plays the game by typing he or her choice. If the visitor has a
-    higher score than the computer at the end of five rounds of playing
+    The console base rock, paper or scissors game has been updated with a user interface. The visitor
+    plays the game by clicking on his or her choice. If the visitor is the first
+    win 5 rounds of playing
     rock, paper or scissors then they win the game.
-    However, should the visitor(player) have a lower score at the end
-    of five rounds they will lose the game.
+    However, should the computer be first to score five points
+    they will lose the game.
 
 ## How to play
-    The game only allows the Player to type any of the following options
+    Play by clicking any of the following options
     - rock
     - Paper
     - Scissors
 
-    Note: if the player types any other option the game will terminate
-    and state the winner and give both player and computer final score.
+    Note: restart resets the game
